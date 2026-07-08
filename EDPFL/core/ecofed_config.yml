@@ -1,0 +1,27 @@
+# EcoFed configrations
+Initializer:
+  Dataset:
+    name: Tiny-ImageNet
+    path: /home/dw217/EDPFL_Project/pretraining_dataset/tiny-imagenet-200/
+    N: 100000
+    img_size: 64
+    num_classes: 200
+  Pre-training:
+    save_path: C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\pretrained\
+    model_name: ResNet12
+    device: cpu
+    LR: 0.01
+    EPOCHS: 100
+
+Compressor:
+  Method: Int8_Quantization
+
+Buffer:
+  buffer_size: 500
+  buffer_device: cpu
+
+Activation_Switch:
+  method: periodic
+  period: 2
+
+    

@@ -1,0 +1,17 @@
+12380 bind
+2026-07-08 03:11:29,575 - server.FL_Server - INFO - Waiting Incoming Connections.
+Traceback (most recent call last):
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 232, in <module>
+    main()
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 124, in main
+    server = EDPFL_Server.EDPFL_Server(SERVER_ADDR, SERVER_PORT, DATASET, DEVICE, PATH, K, MODEL, NUM_CLASSES, client_sampler, shard_indices, E, ITERS, FedAdapt_Modules, EcoFed_Modules, FedFreeze_Modules)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\EDPFL_Server.py", line 33, in __init__
+    super(EDPFL_Server, self).__init__(ip, server_port, dataset, device, path, K, model, num_classes, client_sampler, shard_indices)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\FL_Server.py", line 41, in __init__
+    (client_sock, (ip, port)) = self.communicator.sock.accept()
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\socket.py", line 294, in accept
+    fd, addr = self._accept()
+               ^^^^^^^^^^^^^^
+KeyboardInterrupt

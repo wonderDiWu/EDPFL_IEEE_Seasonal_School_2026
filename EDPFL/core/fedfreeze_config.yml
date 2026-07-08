@@ -1,0 +1,15 @@
+# FedFreeze configrations
+Global_Freezer:
+  thres1: 0.9
+  thres2: 0.001
+
+Convergence_Monitor:
+  alpha: 0.9
+
+Local_Freezer:
+  epsilon: 0.2
+  
+Layer_Regularizer:
+  mu: 4
+  
+  

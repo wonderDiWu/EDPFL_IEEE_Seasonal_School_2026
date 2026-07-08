@@ -1,0 +1,52 @@
+_wandb:
+    value:
+        cli_version: 0.28.0
+        e:
+            csolkfrawtn919zn6pdxxubnr8dz22vb:
+                args:
+                    - --testbed
+                    - PI
+                    - --dataset
+                    - CIFAR10
+                    - --model
+                    - ResNet12
+                    - --mode
+                    - EDPFL
+                codePath: serverrun.py
+                codePathLocal: serverrun.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                disk:
+                    /:
+                        total: "1023549632512"
+                        used: "93351174144"
+                email: datawonder8@gmail.com
+                executable: C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\.venv\Scripts\python.exe
+                host: PC22907
+                memory:
+                    total: "34069057536"
+                os: Windows-10-10.0.26200-SP0
+                program: C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py
+                python: CPython 3.11.15
+                root: C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core
+                startedAt: "2026-07-08T02:11:28.480179Z"
+                writerId: csolkfrawtn919zn6pdxxubnr8dz22vb
+        m: []
+        python_version: 3.11.15
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+            "4": 3.11.15
+            "5": 0.28.0
+            "8":
+                - 3
+            "12": 0.28.0
+            "13": windows-amd64

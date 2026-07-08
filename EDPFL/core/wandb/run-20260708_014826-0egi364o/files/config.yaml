@@ -1,0 +1,64 @@
+_wandb:
+    value:
+        cli_version: 0.28.0
+        e:
+            i33s95liqc5hmvb3csb5fh77q14seujo:
+                args:
+                    - --testbed
+                    - PI
+                    - --dataset
+                    - CIFAR10
+                    - --model
+                    - LeNet
+                    - --mode
+                    - EDPFL
+                codePath: serverrun.py
+                codePathLocal: serverrun.py
+                cpu_count: 8
+                cpu_count_logical: 16
+                disk:
+                    /:
+                        total: "1023549632512"
+                        used: "93366116352"
+                email: datawonder8@gmail.com
+                executable: C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\.venv\Scripts\python.exe
+                host: PC22907
+                memory:
+                    total: "34069057536"
+                os: Windows-10-10.0.26200-SP0
+                program: C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py
+                python: CPython 3.11.15
+                root: C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core
+                startedAt: "2026-07-08T00:48:26.930801Z"
+                writerId: i33s95liqc5hmvb3csb5fh77q14seujo
+        m: []
+        python_version: 3.11.15
+        t:
+            "1":
+                - 1
+                - 5
+                - 41
+                - 53
+            "2":
+                - 1
+                - 5
+                - 41
+                - 53
+            "3":
+                - 19
+            "4": 3.11.15
+            "5": 0.28.0
+            "8":
+                - 3
+            "12": 0.28.0
+            "13": windows-amd64
+DATASET:
+    value: CIFAR10_True
+MODE:
+    value: EDPFL
+MODEL:
+    value: LeNet
+TESTBED:
+    value: PI
+TRAINING_PARAMETERS:
+    value: 2_1_0.1_True_100_1_20_0.01_100-100_0.1_False_/home/dw217/EDPFL_Project/pretrained/ResNet12_Tiny-ImageNet.pth_0

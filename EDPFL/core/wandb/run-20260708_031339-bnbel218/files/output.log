@@ -1,0 +1,222 @@
+10788 bind
+2026-07-08 03:13:40,340 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 03:13:51,668 - server.FL_Server - INFO - Got connection from 192.168.137.104:52001
+2026-07-08 03:13:51,668 - server.FL_Server - INFO - <socket.socket fd=2280, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.104', 52001)>
+2026-07-08 03:13:51,669 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 03:14:00,374 - server.FL_Server - INFO - Got connection from 192.168.137.168:52002
+2026-07-08 03:14:00,375 - server.FL_Server - INFO - <socket.socket fd=2264, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.168', 52002)>
+2026-07-08 03:14:00,384 - server.FL_Server - INFO - ResNet(
+  (pps): ModuleList(
+    (0): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (3): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (4): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (5): Sequential(
+      (0): Flatten()
+      (1): Linear(in_features=256, out_features=10, bias=False)
+    )
+  )
+)
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:18<00:00,  5.30it/s]
+2026-07-08 03:14:27,115 - __main__ - INFO - Global loss: 0.024470809602737426, Global Acc: 9.45
+2026-07-08 03:14:27,115 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:14:27,116 - __main__ - INFO - Round 0 Start
+2026-07-08 03:14:27,116 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:14:27,117 - __main__ - INFO - [43, 90]
+2026-07-08 03:14:27,117 - __main__ - INFO - Cluster 0 Start
+'C:\\Users\\dw217\\Desktop\\IEEE Seasonal School\\EDPFL_Project\\pretrained\\ResNet12_Tiny-ImageNet.pth'
+C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\pretrained\ResNet12_Tiny-ImageNet.pth
+pretrained ResNet12_Tiny-ImageNet.pth found.
+'C:\\Users\\dw217\\Desktop\\IEEE Seasonal School\\EDPFL_Project\\pretrained\\ResNet12_Tiny-ImageNet.pth'
+C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\pretrained\ResNet12_Tiny-ImageNet.pth
+pretrained ResNet12_Tiny-ImageNet.pth found.
+2026-07-08 03:14:27,875 - server.EDPFL_Server - INFO - Buffer size: # pp x id 0
+2026-07-08 03:14:27,876 - server.EDPFL_Server - INFO - Update flag: True
+  0%|                                                                                                | 0/25 [00:00<?, ?it/s]C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\.venv\Lib\site-packages\torch\_utils.py:455: UserWarning: TypedStorage is deprecated. It will be removed in the future and UntypedStorage will be the only storage class. This should only matter to you if you are using storages directly.  To access UntypedStorage directly, use tensor.untyped_storage() instead of tensor.storage()
+  device=storage.device,                                                                             | 0/25 [00:00<?, ?it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.89it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:07<00:00,  3.49it/s]
+2026-07-08 03:14:35,046 - server.EDPFL_Server - INFO - simulation_agg_control: 2████████████| 25/25 [00:07<00:00,  3.57it/s]
+2026-07-08 03:14:35,053 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:19<00:00,  5.25it/s]
+2026-07-08 03:14:54,119 - __main__ - INFO - Global loss: 0.06115323371887207, Global Acc: 25.53
+2026-07-08 03:14:54,121 - __main__ - INFO - Round Finish
+2026-07-08 03:14:54,121 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:14:54,121 - __main__ - INFO - Round 1 Start
+2026-07-08 03:14:54,121 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:14:54,122 - __main__ - INFO - [95, 40]
+2026-07-08 03:14:54,122 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:14:54,704 - server.EDPFL_Server - INFO - Buffer size: # pp x id 2
+2026-07-08 03:14:54,704 - server.EDPFL_Server - INFO - Update flag: False
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:00<00:00, 50.40it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:00<00:00, 50.12it/s]
+2026-07-08 03:14:55,414 - server.EDPFL_Server - INFO - simulation_agg_control: 2
+2026-07-08 03:14:55,421 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:18<00:00,  5.29it/s]
+2026-07-08 03:15:14,321 - __main__ - INFO - Global loss: 0.06677905130386352, Global Acc: 28.45
+2026-07-08 03:15:14,322 - __main__ - INFO - Round Finish
+2026-07-08 03:15:14,322 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:15:14,323 - __main__ - INFO - Round 2 Start
+2026-07-08 03:15:14,323 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:15:14,323 - __main__ - INFO - [41, 4]
+2026-07-08 03:15:14,323 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:15:15,023 - server.EDPFL_Server - INFO - Buffer size: # pp x id 2
+2026-07-08 03:15:15,024 - server.EDPFL_Server - INFO - Update flag: True
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:04<00:00,  6.02it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:06<00:00,  3.72it/s]
+2026-07-08 03:15:21,755 - server.EDPFL_Server - INFO - simulation_agg_control: 2████████████| 25/25 [00:06<00:00,  4.60it/s]
+2026-07-08 03:15:21,766 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+ ... (more hidden) ...
+2026-07-08 03:15:40,121 - __main__ - INFO - Global loss: 0.03195625510215759, Global Acc: 37.66
+2026-07-08 03:15:40,121 - __main__ - INFO - Round Finish
+2026-07-08 03:15:40,121 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:15:40,121 - __main__ - INFO - Round 3 Start
+2026-07-08 03:15:40,122 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:15:40,122 - __main__ - INFO - [67, 18]
+2026-07-08 03:15:40,122 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:15:40,619 - server.EDPFL_Server - INFO - Buffer size: # pp x id 4
+2026-07-08 03:15:40,619 - server.EDPFL_Server - INFO - Update flag: False
+ ... (more hidden) ...
+ ... (more hidden) ...
+2026-07-08 03:15:41,405 - server.EDPFL_Server - INFO - simulation_agg_control: 2
+2026-07-08 03:15:41,412 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+ ... (more hidden) ...
+2026-07-08 03:16:01,066 - __main__ - INFO - Global loss: 0.07403358540534972, Global Acc: 28.37
+2026-07-08 03:16:01,067 - __main__ - INFO - Round Finish
+2026-07-08 03:16:01,067 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:16:01,068 - __main__ - INFO - Round 4 Start
+2026-07-08 03:16:01,068 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:16:01,068 - __main__ - INFO - [32, 77]
+2026-07-08 03:16:01,068 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:16:01,558 - server.EDPFL_Server - INFO - Buffer size: # pp x id 4
+2026-07-08 03:16:01,558 - server.EDPFL_Server - INFO - Update flag: True
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:03<00:00,  6.29it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.42it/s]
+2026-07-08 03:16:07,225 - server.EDPFL_Server - INFO - simulation_agg_control: 2████████████| 25/25 [00:05<00:00,  5.66it/s]
+2026-07-08 03:16:07,239 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:19<00:00,  5.17it/s]
+2026-07-08 03:16:26,599 - __main__ - INFO - Global loss: 0.04654107398986816, Global Acc: 23.78
+2026-07-08 03:16:26,600 - __main__ - INFO - Round Finish
+2026-07-08 03:16:26,600 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:16:26,600 - __main__ - INFO - Round 5 Start
+2026-07-08 03:16:26,600 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:16:26,601 - __main__ - INFO - [19, 48]
+2026-07-08 03:16:26,601 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:16:27,066 - server.EDPFL_Server - INFO - Buffer size: # pp x id 6
+2026-07-08 03:16:27,066 - server.EDPFL_Server - INFO - Update flag: False
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:00<00:00, 51.74it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:00<00:00, 50.99it/s]
+2026-07-08 03:16:27,786 - server.EDPFL_Server - INFO - simulation_agg_control: 2
+2026-07-08 03:16:27,794 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:19<00:00,  5.19it/s]
+2026-07-08 03:16:47,082 - __main__ - INFO - Global loss: 0.05700512065887451, Global Acc: 29.04
+2026-07-08 03:16:47,083 - __main__ - INFO - Round Finish
+2026-07-08 03:16:47,083 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:16:47,084 - __main__ - INFO - Round 6 Start
+2026-07-08 03:16:47,084 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:16:47,084 - __main__ - INFO - [74, 37]
+2026-07-08 03:16:47,084 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:16:47,589 - server.EDPFL_Server - INFO - Buffer size: # pp x id 6
+2026-07-08 03:16:47,589 - server.EDPFL_Server - INFO - Update flag: True
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:04<00:00,  5.76it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:05<00:00,  4.50it/s]
+2026-07-08 03:16:53,157 - server.EDPFL_Server - INFO - simulation_agg_control: 2████████████| 25/25 [00:05<00:00,  4.87it/s]
+2026-07-08 03:16:53,164 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:19<00:00,  5.18it/s]
+2026-07-08 03:17:12,470 - __main__ - INFO - Global loss: 0.05261572105884552, Global Acc: 28.68
+2026-07-08 03:17:12,471 - __main__ - INFO - Round Finish
+2026-07-08 03:17:12,471 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:17:12,471 - __main__ - INFO - Round 7 Start
+2026-07-08 03:17:12,472 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:17:12,472 - __main__ - INFO - [91, 90]
+2026-07-08 03:17:12,473 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:17:12,833 - server.EDPFL_Server - INFO - Buffer size: # pp x id 8
+2026-07-08 03:17:12,833 - server.EDPFL_Server - INFO - Update flag: False
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:00<00:00, 50.43it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:00<00:00, 50.26it/s]
+2026-07-08 03:17:13,550 - server.EDPFL_Server - INFO - simulation_agg_control: 2
+2026-07-08 03:17:13,553 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:19<00:00,  5.20it/s]
+2026-07-08 03:17:32,801 - __main__ - INFO - Global loss: 0.038962154245376586, Global Acc: 32.66
+2026-07-08 03:17:32,802 - __main__ - INFO - Round Finish
+2026-07-08 03:17:32,802 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:17:32,802 - __main__ - INFO - Round 8 Start
+2026-07-08 03:17:32,802 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:17:32,803 - __main__ - INFO - [60, 8]
+2026-07-08 03:17:32,804 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:17:33,070 - server.EDPFL_Server - INFO - Buffer size: # pp x id 8
+2026-07-08 03:17:33,070 - server.EDPFL_Server - INFO - Update flag: True
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:03<00:00,  6.35it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:04<00:00,  5.34it/s]
+2026-07-08 03:17:37,758 - server.EDPFL_Server - INFO - simulation_agg_control: 2████████████| 25/25 [00:04<00:00,  5.90it/s]
+2026-07-08 03:17:37,766 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:19<00:00,  5.19it/s]
+2026-07-08 03:17:57,024 - __main__ - INFO - Global loss: 0.039569167280197146, Global Acc: 29.29
+2026-07-08 03:17:57,024 - __main__ - INFO - Round Finish
+2026-07-08 03:17:57,024 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:17:57,025 - __main__ - INFO - Round 9 Start
+2026-07-08 03:17:57,025 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:17:57,026 - __main__ - INFO - [10, 66]
+2026-07-08 03:17:57,026 - __main__ - INFO - Cluster 0 Start
+2026-07-08 03:17:57,375 - server.EDPFL_Server - INFO - Buffer size: # pp x id 10
+2026-07-08 03:17:57,376 - server.EDPFL_Server - INFO - Update flag: False
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:00<00:00, 51.42it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:00<00:00, 50.96it/s]
+2026-07-08 03:17:58,101 - server.EDPFL_Server - INFO - simulation_agg_control: 2
+2026-07-08 03:17:58,111 - __main__ - INFO - OrderedDict([('pps.0.0.weight', 1), ('pps.0.1.weight', 1), ('pps.0.1.bias', 1), ('pps.1.0.weight', 0), ('pps.1.1.weight', 0), ('pps.1.1.bias', 0), ('pps.2.0.residual_function.0.weight', 0), ('pps.2.0.residual_function.1.weight', 0), ('pps.2.0.residual_function.1.bias', 0), ('pps.2.0.residual_function.3.weight', 0), ('pps.2.0.residual_function.4.weight', 0), ('pps.2.0.residual_function.4.bias', 0), ('pps.2.0.shortcut.0.weight', 0), ('pps.2.0.shortcut.1.weight', 0), ('pps.2.0.shortcut.1.bias', 0), ('pps.3.0.residual_function.0.weight', 0), ('pps.3.0.residual_function.1.weight', 0), ('pps.3.0.residual_function.1.bias', 0), ('pps.3.0.residual_function.3.weight', 0), ('pps.3.0.residual_function.4.weight', 0), ('pps.3.0.residual_function.4.bias', 0), ('pps.3.0.shortcut.0.weight', 0), ('pps.3.0.shortcut.1.weight', 0), ('pps.3.0.shortcut.1.bias', 0), ('pps.4.0.residual_function.0.weight', 0), ('pps.4.0.residual_function.1.weight', 0), ('pps.4.0.residual_function.1.bias', 0), ('pps.4.0.residual_function.3.weight', 0), ('pps.4.0.residual_function.4.weight', 0), ('pps.4.0.residual_function.4.bias', 0), ('pps.4.0.shortcut.0.weight', 0), ('pps.4.0.shortcut.1.weight', 0), ('pps.4.0.shortcut.1.bias', 0), ('pps.5.1.weight', 0)])
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:19<00:00,  5.26it/s]
+2026-07-08 03:18:17,129 - __main__ - INFO - Global loss: 0.03726140604019165, Global Acc: 36.67
+2026-07-08 03:18:17,131 - __main__ - INFO - Round Finish

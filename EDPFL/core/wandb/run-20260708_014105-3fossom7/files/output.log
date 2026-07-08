@@ -1,0 +1,122 @@
+2332 bind
+2026-07-08 01:41:06,527 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 01:41:19,672 - server.FL_Server - INFO - Got connection from 192.168.137.104:52001
+2026-07-08 01:41:19,672 - server.FL_Server - INFO - <socket.socket fd=2276, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.104', 52001)>
+2026-07-08 01:41:19,673 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 01:41:51,093 - server.FL_Server - INFO - Got connection from 192.168.137.168:52002
+2026-07-08 01:41:51,093 - server.FL_Server - INFO - <socket.socket fd=2120, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.168', 52002)>
+2026-07-08 01:41:51,101 - server.FL_Server - INFO - LeNet(
+  (pps): ModuleList(
+    (0): Sequential(
+      (0): Conv2d(3, 6, kernel_size=(5, 5), stride=(1, 1), bias=False)
+      (1): ReLU(inplace=True)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1), bias=False)
+      (1): ReLU(inplace=True)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): Flatten()
+      (1): Linear(in_features=400, out_features=120, bias=False)
+      (2): ReLU(inplace=True)
+    )
+    (3): Sequential(
+      (0): Linear(in_features=120, out_features=84, bias=False)
+      (1): ReLU(inplace=True)
+    )
+    (4): Linear(in_features=84, out_features=10, bias=False)
+  )
+)
+100%|███████████████████████████████████████████████████████████████████████████████████| 100/100 [00:15<00:00,  6.30it/s]
+2026-07-08 01:42:07,611 - __main__ - INFO - Global loss: 0.023025291275978087, Global Acc: 12.8
+2026-07-08 01:42:07,612 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:42:07,612 - __main__ - INFO - Round 0 Start
+2026-07-08 01:42:07,613 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:42:07,613 - __main__ - INFO - [10, 19]
+2026-07-08 01:42:07,613 - __main__ - INFO - Cluster 0 Start
+100%|███████████████████████████████████████████████████████████████████████████████████| 125/125 [00:14<00:00,  8.46it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████| 125/125 [00:30<00:00,  4.03it/s]
+2026-07-08 01:42:39,103 - server.DPFL_Server - INFO - simulation_agg_control: 2
+100%|███████████████████████████████████████████████████████████████████████████████████| 100/100 [00:16<00:00,  6.07it/s]
+2026-07-08 01:42:55,591 - __main__ - INFO - Global loss: 0.021753754496574403, Global Acc: 21.32
+2026-07-08 01:42:55,592 - __main__ - INFO - Round Finish
+2026-07-08 01:42:55,592 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:42:55,593 - __main__ - INFO - Round 1 Start
+2026-07-08 01:42:55,593 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:42:55,593 - __main__ - INFO - [10, 1]
+2026-07-08 01:42:55,593 - __main__ - INFO - Cluster 0 Start
+100%|███████████████████████████████████████████████████████████████████████████████████| 125/125 [00:15<00:00,  8.12it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████| 125/125 [00:30<00:00,  4.07it/s]
+2026-07-08 01:43:26,733 - server.DPFL_Server - INFO - simulation_agg_control: 2
+100%|███████████████████████████████████████████████████████████████████████████████████| 100/100 [00:16<00:00,  6.17it/s]
+2026-07-08 01:43:42,938 - __main__ - INFO - Global loss: 0.020289151871204378, Global Acc: 24.55
+2026-07-08 01:43:42,939 - __main__ - INFO - Round Finish
+2026-07-08 01:43:42,939 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:43:42,939 - __main__ - INFO - Round 2 Start
+2026-07-08 01:43:42,939 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:43:42,940 - __main__ - INFO - [16, 4]
+2026-07-08 01:43:42,940 - __main__ - INFO - Cluster 0 Start
+100%|███████████████████████████████████████████████████████████████████████████████████| 125/125 [00:16<00:00,  7.54it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████| 125/125 [00:29<00:00,  4.28it/s]
+2026-07-08 01:44:12,500 - server.DPFL_Server - INFO - simulation_agg_control: 2
+100%|███████████████████████████████████████████████████████████████████████████████████| 100/100 [00:17<00:00,  5.88it/s]
+2026-07-08 01:44:29,524 - __main__ - INFO - Global loss: 0.0192844172000885, Global Acc: 28.63
+2026-07-08 01:44:29,524 - __main__ - INFO - Round Finish
+2026-07-08 01:44:29,524 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:44:29,525 - __main__ - INFO - Round 3 Start
+2026-07-08 01:44:29,525 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:44:29,525 - __main__ - INFO - [8, 4]
+2026-07-08 01:44:29,526 - __main__ - INFO - Cluster 0 Start
+Exception in thread Thread-20 (_thread_weights_distribution_):
+Traceback (most recent call last):
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\FL_Server.py", line 141, in _thread_weights_distribution_
+    self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_TIME_RECORD')
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+                                  ^^^^^^^^^^^^
+TimeoutError: [WinError 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond
+  0%|                                                                                             | 0/125 [00:00<?, ?it/s]
+Exception in thread Thread-22 (_thread_training_offloading):                                      | 0/125 [00:00<?, ?it/s]
+Traceback (most recent call last):
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\DPFL_Server.py", line 121, in _thread_training_offloading
+    msg = self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_LOCAL_ACTIVATIONS_CLIENT_TO_SERVER')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+                                  ^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+ 54%|█████████████████████████████████████████████                                       | 67/125 [00:08<00:07,  7.77it/s]
+Exception in thread Thread-23 (_thread_training_offloading):                             | 67/125 [00:08<00:10,  5.65it/s]
+Traceback (most recent call last):
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\DPFL_Server.py", line 121, in _thread_training_offloading
+    msg = self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_LOCAL_ACTIVATIONS_CLIENT_TO_SERVER')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+                                  ^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host
+Traceback (most recent call last):
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 232, in <module>
+    main()
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 179, in main
+    server.train(r, c)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\DPFL_Server.py", line 109, in train
+    self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_ROUND_FINISH')
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+                                  ^^^^^^^^^^^^
+ConnectionResetError: [WinError 10054] An existing connection was forcibly closed by the remote host

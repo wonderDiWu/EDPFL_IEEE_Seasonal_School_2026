@@ -1,0 +1,92 @@
+11776 bind
+2026-07-08 02:04:09,672 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 02:04:20,859 - server.FL_Server - INFO - Got connection from 192.168.137.104:52001
+2026-07-08 02:04:20,859 - server.FL_Server - INFO - <socket.socket fd=2380, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.104', 52001)>
+2026-07-08 02:04:20,860 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 02:04:26,877 - server.FL_Server - INFO - Got connection from 192.168.137.168:52002
+2026-07-08 02:04:26,878 - server.FL_Server - INFO - <socket.socket fd=2304, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.168', 52002)>
+2026-07-08 02:04:26,961 - server.FL_Server - INFO - VGG(
+  (pps): ModuleList(
+    (0): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (5): ReLU(inplace=True)
+      (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (3): Sequential(
+      (0): Conv2d(256, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (4): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (5): ReLU(inplace=True)
+      (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (4): Sequential(
+      (0): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): Conv2d(512, 512, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (4): BatchNorm2d(512, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (5): ReLU(inplace=True)
+      (6): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (5): Sequential(
+      (0): Flatten()
+      (1): Linear(in_features=512, out_features=512, bias=False)
+      (2): ReLU(inplace=True)
+      (3): Linear(in_features=512, out_features=512, bias=False)
+      (4): ReLU(inplace=True)
+      (5): Linear(in_features=512, out_features=10, bias=False)
+    )
+  )
+)
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:25<00:00,  3.86it/s]
+2026-07-08 02:04:53,533 - __main__ - INFO - Global loss: 0.023076660656929017, Global Acc: 11.09
+2026-07-08 02:04:53,534 - __main__ - INFO - =====================================================================================================>
+2026-07-08 02:04:53,534 - __main__ - INFO - Round 0 Start
+2026-07-08 02:04:53,535 - __main__ - INFO - Current Client IDs:
+2026-07-08 02:04:53,535 - __main__ - INFO - [43, 90]
+2026-07-08 02:04:53,536 - __main__ - INFO - Cluster 0 Start
+Exception in thread Thread-2 (_thread_weights_distribution_)Traceback (most recent call last):
+:
+Traceback (most recent call last):
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)    self._target(*self._args, **self._kwargs)
+
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_TIME_RECORD')
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack requires a buffer of 4 bytes
+Traceback (most recent call last):
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 232, in <module>
+    main()
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 179, in main
+    server.train(r, c)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\FL_Server.py", line 127, in train
+    self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_ROUND_FINISH')
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+                                  ^^^^^^^^^^^^
+ConnectionAbortedError: [WinError 10053] An established connection was aborted by the software in your host machine

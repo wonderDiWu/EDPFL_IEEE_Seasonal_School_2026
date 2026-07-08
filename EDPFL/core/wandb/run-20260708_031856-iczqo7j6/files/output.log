@@ -1,0 +1,129 @@
+36520 bind
+2026-07-08 03:18:57,675 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 03:19:18,186 - server.FL_Server - INFO - Got connection from 192.168.137.168:52002
+2026-07-08 03:19:18,186 - server.FL_Server - INFO - <socket.socket fd=2456, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.168', 52002)>
+2026-07-08 03:19:18,187 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 03:20:35,904 - server.FL_Server - INFO - Got connection from 192.168.137.104:52001
+2026-07-08 03:20:35,905 - server.FL_Server - INFO - <socket.socket fd=2464, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.104', 52001)>
+2026-07-08 03:20:35,915 - server.FL_Server - INFO - ResNet(
+  (pps): ModuleList(
+    (0): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (3): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (4): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (5): Sequential(
+      (0): Flatten()
+      (1): Linear(in_features=256, out_features=10, bias=False)
+    )
+  )
+)
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:18<00:00,  5.55it/s]
+2026-07-08 03:20:54,511 - __main__ - INFO - Global loss: 0.024470809602737426, Global Acc: 9.45
+2026-07-08 03:20:54,512 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:20:54,512 - __main__ - INFO - Round 0 Start
+2026-07-08 03:20:54,512 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:20:54,512 - __main__ - INFO - [43, 90]
+2026-07-08 03:20:54,513 - __main__ - INFO - Cluster 0 Start
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:24<00:00,  1.02it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████| 25/25 [00:30<00:00,  1.24s/it]
+2026-07-08 03:21:26,377 - server.DPFL_Server - INFO - simulation_agg_control: 2
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:18<00:00,  5.36it/s]
+2026-07-08 03:21:45,058 - __main__ - INFO - Global loss: 0.0587476203918457, Global Acc: 26.74
+2026-07-08 03:21:45,058 - __main__ - INFO - Round Finish
+2026-07-08 03:21:45,059 - __main__ - INFO - =====================================================================================================>
+2026-07-08 03:21:45,059 - __main__ - INFO - Round 1 Start
+2026-07-08 03:21:45,059 - __main__ - INFO - Current Client IDs:
+2026-07-08 03:21:45,059 - __main__ - INFO - [95, 40]
+2026-07-08 03:21:45,060 - __main__ - INFO - Cluster 0 Start
+ 72%|██████████████████████████████████████████████████████████████▋                        | 18/25 [00:21<00:08,  1.20s/it]
+Exception in thread Thread-10 (_thread_training_offloading):███████████                     | 19/25 [00:20<00:06,  1.11s/it]
+Traceback (most recent call last):
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\DPFL_Server.py", line 121, in _thread_training_offloading
+    msg = self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_LOCAL_ACTIVATIONS_CLIENT_TO_SERVER')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack requires a buffer of 4 bytes
+ 92%|████████████████████████████████████████████████████████████████████████████████       | 23/25 [00:24<00:02,  1.07s/it]
+Exception in thread Thread-11 (_thread_training_offloading):█████████████████████████       | 23/25 [00:24<00:01,  1.08it/s]
+Traceback (most recent call last):
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 1045, in _bootstrap_inner
+    self.run()
+  File "C:\Users\dw217\AppData\Roaming\uv\python\cpython-3.11-windows-x86_64-none\Lib\threading.py", line 982, in run
+    self._target(*self._args, **self._kwargs)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\DPFL_Server.py", line 121, in _thread_training_offloading
+    msg = self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_LOCAL_ACTIVATIONS_CLIENT_TO_SERVER')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack requires a buffer of 4 bytes
+Traceback (most recent call last):
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 232, in <module>
+    main()
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 179, in main
+    server.train(r, c)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\DPFL_Server.py", line 109, in train
+    self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_ROUND_FINISH')
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack requires a buffer of 4 bytes

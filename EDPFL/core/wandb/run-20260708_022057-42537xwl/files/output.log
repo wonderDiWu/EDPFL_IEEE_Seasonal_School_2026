@@ -1,0 +1,119 @@
+31668 bind
+2026-07-08 02:20:58,233 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 02:21:35,541 - server.FL_Server - INFO - Got connection from 192.168.137.104:52001
+2026-07-08 02:21:35,542 - server.FL_Server - INFO - <socket.socket fd=2188, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.104', 52001)>
+2026-07-08 02:21:35,543 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 02:21:37,467 - server.FL_Server - INFO - Got connection from 192.168.137.168:52002
+2026-07-08 02:21:37,468 - server.FL_Server - INFO - <socket.socket fd=2096, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.168', 52002)>
+2026-07-08 02:21:37,476 - server.FL_Server - INFO - ResNet(
+  (pps): ModuleList(
+    (0): Sequential(
+      (0): Conv2d(3, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+      (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+      (2): ReLU(inplace=True)
+      (3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(64, 64, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (3): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(128, 128, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (4): Sequential(
+      (0): BasicBlock(
+        (residual_function): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+          (2): ReLU(inplace=True)
+          (3): Conv2d(256, 256, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False)
+          (4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+        (shortcut): Sequential(
+          (0): Conv2d(128, 256, kernel_size=(1, 1), stride=(2, 2), bias=False)
+          (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, bias=True, track_running_stats=False)
+        )
+      )
+    )
+    (5): Sequential(
+      (0): Flatten()
+      (1): Linear(in_features=256, out_features=10, bias=False)
+    )
+  )
+)
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:17<00:00,  5.65it/s]
+2026-07-08 02:21:55,761 - __main__ - INFO - Global loss: 0.024470809602737426, Global Acc: 9.45
+2026-07-08 02:21:55,762 - __main__ - INFO - =====================================================================================================>
+2026-07-08 02:21:55,763 - __main__ - INFO - Round 0 Start
+2026-07-08 02:21:55,763 - __main__ - INFO - Current Client IDs:
+2026-07-08 02:21:55,763 - __main__ - INFO - [43, 90]
+2026-07-08 02:21:55,763 - __main__ - INFO - Cluster 0 Start
+2026-07-08 02:22:55,319 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:17<00:00,  5.58it/s]
+2026-07-08 02:23:13,236 - __main__ - INFO - Global loss: 0.039789084696769714, Global Acc: 11.87
+2026-07-08 02:23:13,237 - __main__ - INFO - Round Finish
+2026-07-08 02:23:13,237 - __main__ - INFO - =====================================================================================================>
+2026-07-08 02:23:13,237 - __main__ - INFO - Round 1 Start
+2026-07-08 02:23:13,237 - __main__ - INFO - Current Client IDs:
+2026-07-08 02:23:13,237 - __main__ - INFO - [95, 40]
+2026-07-08 02:23:13,238 - __main__ - INFO - Cluster 0 Start
+2026-07-08 02:24:09,461 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:17<00:00,  5.56it/s]
+2026-07-08 02:24:27,457 - __main__ - INFO - Global loss: 0.04951221623420715, Global Acc: 13.81
+2026-07-08 02:24:27,458 - __main__ - INFO - Round Finish
+2026-07-08 02:24:27,458 - __main__ - INFO - =====================================================================================================>
+2026-07-08 02:24:27,458 - __main__ - INFO - Round 2 Start
+2026-07-08 02:24:27,458 - __main__ - INFO - Current Client IDs:
+2026-07-08 02:24:27,459 - __main__ - INFO - [41, 4]
+2026-07-08 02:24:27,459 - __main__ - INFO - Cluster 0 Start
+2026-07-08 02:25:19,789 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:18<00:00,  5.55it/s]
+2026-07-08 02:25:37,810 - __main__ - INFO - Global loss: 0.029415378618240357, Global Acc: 15.73
+2026-07-08 02:25:37,810 - __main__ - INFO - Round Finish
+2026-07-08 02:25:37,811 - __main__ - INFO - =====================================================================================================>
+2026-07-08 02:25:37,811 - __main__ - INFO - Round 3 Start
+2026-07-08 02:25:37,811 - __main__ - INFO - Current Client IDs:
+2026-07-08 02:25:37,811 - __main__ - INFO - [67, 18]
+2026-07-08 02:25:37,812 - __main__ - INFO - Cluster 0 Start
+2026-07-08 02:26:35,025 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:18<00:00,  5.47it/s]
+2026-07-08 02:26:53,305 - __main__ - INFO - Global loss: 0.023962981581687928, Global Acc: 18.17
+2026-07-08 02:26:53,306 - __main__ - INFO - Round Finish
+2026-07-08 02:26:53,307 - __main__ - INFO - =====================================================================================================>
+2026-07-08 02:26:53,307 - __main__ - INFO - Round 4 Start
+2026-07-08 02:26:53,307 - __main__ - INFO - Current Client IDs:
+2026-07-08 02:26:53,307 - __main__ - INFO - [32, 77]
+2026-07-08 02:26:53,308 - __main__ - INFO - Cluster 0 Start
+2026-07-08 02:27:53,412 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:18<00:00,  5.44it/s]
+2026-07-08 02:28:11,806 - __main__ - INFO - Global loss: 0.02971458375453949, Global Acc: 16.59
+2026-07-08 02:28:11,808 - __main__ - INFO - Round Finish

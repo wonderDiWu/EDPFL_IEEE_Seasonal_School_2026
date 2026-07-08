@@ -1,0 +1,65 @@
+27592 bind
+2026-07-08 01:48:28,210 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 01:48:58,684 - server.FL_Server - INFO - Got connection from 192.168.137.104:52001
+2026-07-08 01:48:58,685 - server.FL_Server - INFO - <socket.socket fd=2612, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.104', 52001)>
+2026-07-08 01:48:58,685 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 01:49:07,656 - server.FL_Server - INFO - Got connection from 192.168.137.168:52002
+2026-07-08 01:49:07,657 - server.FL_Server - INFO - <socket.socket fd=2324, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.168', 52002)>
+2026-07-08 01:49:07,659 - server.FL_Server - INFO - LeNet(
+  (pps): ModuleList(
+    (0): Sequential(
+      (0): Conv2d(3, 6, kernel_size=(5, 5), stride=(1, 1), bias=False)
+      (1): ReLU(inplace=True)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1), bias=False)
+      (1): ReLU(inplace=True)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): Flatten()
+      (1): Linear(in_features=400, out_features=120, bias=False)
+      (2): ReLU(inplace=True)
+    )
+    (3): Sequential(
+      (0): Linear(in_features=120, out_features=84, bias=False)
+      (1): ReLU(inplace=True)
+    )
+    (4): Linear(in_features=84, out_features=10, bias=False)
+  )
+)
+100%|█████████████████████████████████████████████████████████████████████████████████████| 100/100 [00:15<00:00,  6.45it/s]
+2026-07-08 01:49:26,301 - __main__ - INFO - Global loss: 0.023025291275978087, Global Acc: 12.8
+2026-07-08 01:49:26,302 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:49:26,302 - __main__ - INFO - Round 0 Start
+2026-07-08 01:49:26,303 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:49:26,303 - __main__ - INFO - [10, 19]
+2026-07-08 01:49:26,303 - __main__ - INFO - Cluster 0 Start
+Pretraining starting..
+==> Preparing data..
+Traceback (most recent call last):
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 232, in <module>
+    main()
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 176, in main
+    server.initialize(r, adjust_lr, PRETRAINED_INIT, PRETRAINED_INIT_PATH)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\EDPFL_Server.py", line 99, in initialize
+    holistic_pretrain_weights = utils.transfer_weights_holistic(self.EcoFed_Modules.initializer.pre_training(), self.uninet.state_dict())
+                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\ecofed\initializer.py", line 50, in pre_training
+    self.train()
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\ecofed\initializer.py", line 70, in train
+    trainset = datasets.ImageFolder(self.pretrained_dataset_path +'train', transform=transform_train)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\.venv\Lib\site-packages\torchvision\datasets\folder.py", line 328, in __init__
+    super().__init__(
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\.venv\Lib\site-packages\torchvision\datasets\folder.py", line 149, in __init__
+    classes, class_to_idx = self.find_classes(self.root)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\.venv\Lib\site-packages\torchvision\datasets\folder.py", line 234, in find_classes
+    return find_classes(directory)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\.venv\Lib\site-packages\torchvision\datasets\folder.py", line 41, in find_classes
+    classes = sorted(entry.name for entry in os.scandir(directory) if entry.is_dir())
+                                             ^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 3] The system cannot find the path specified: '/home/dw217/EDPFL_Project/pretraining_dataset/tiny-imagenet-200/train'

@@ -1,0 +1,139 @@
+33872 bind
+2026-07-08 01:21:50,205 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 01:23:56,190 - server.FL_Server - INFO - Got connection from 192.168.137.168:52002
+2026-07-08 01:23:56,190 - server.FL_Server - INFO - <socket.socket fd=2520, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.168', 52002)>
+2026-07-08 01:23:56,191 - server.FL_Server - INFO - Waiting Incoming Connections.
+2026-07-08 01:24:25,039 - server.FL_Server - INFO - Got connection from 192.168.137.104:52001
+2026-07-08 01:24:25,040 - server.FL_Server - INFO - <socket.socket fd=2528, family=2, type=1, proto=0, laddr=('192.168.137.1', 52000), raddr=('192.168.137.104', 52001)>
+2026-07-08 01:24:25,043 - server.FL_Server - INFO - LeNet(
+  (pps): ModuleList(
+    (0): Sequential(
+      (0): Conv2d(3, 6, kernel_size=(5, 5), stride=(1, 1), bias=False)
+      (1): ReLU(inplace=True)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (1): Sequential(
+      (0): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1), bias=False)
+      (1): ReLU(inplace=True)
+      (2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    )
+    (2): Sequential(
+      (0): Flatten()
+      (1): Linear(in_features=400, out_features=120, bias=False)
+      (2): ReLU(inplace=True)
+    )
+    (3): Sequential(
+      (0): Linear(in_features=120, out_features=84, bias=False)
+      (1): ReLU(inplace=True)
+    )
+    (4): Linear(in_features=84, out_features=10, bias=False)
+  )
+)
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:15<00:00,  6.28it/s]
+2026-07-08 01:24:41,516 - __main__ - INFO - Global loss: 0.023025291275978087, Global Acc: 12.8
+2026-07-08 01:24:41,517 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:24:41,517 - __main__ - INFO - Round 0 Start
+2026-07-08 01:24:41,517 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:24:41,517 - __main__ - INFO - [10, 19]
+2026-07-08 01:24:41,518 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:25:10,090 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:15<00:00,  6.31it/s]
+2026-07-08 01:25:25,960 - __main__ - INFO - Global loss: 0.021753790402412414, Global Acc: 20.57
+2026-07-08 01:25:25,960 - __main__ - INFO - Round Finish
+2026-07-08 01:25:25,961 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:25:25,961 - __main__ - INFO - Round 1 Start
+2026-07-08 01:25:25,961 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:25:25,961 - __main__ - INFO - [10, 1]
+2026-07-08 01:25:25,961 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:25:49,145 - server.FL_Server - INFO - simulation_agg_control: 2
+ ... (more hidden) ...
+2026-07-08 01:26:04,516 - __main__ - INFO - Global loss: 0.020645000803470613, Global Acc: 23.98
+2026-07-08 01:26:04,517 - __main__ - INFO - Round Finish
+2026-07-08 01:26:04,517 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:26:04,518 - __main__ - INFO - Round 2 Start
+2026-07-08 01:26:04,518 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:26:04,518 - __main__ - INFO - [16, 4]
+2026-07-08 01:26:04,519 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:26:24,451 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:16<00:00,  6.08it/s]
+2026-07-08 01:26:40,934 - __main__ - INFO - Global loss: 0.019259224581718446, Global Acc: 28.64
+2026-07-08 01:26:40,935 - __main__ - INFO - Round Finish
+2026-07-08 01:26:40,935 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:26:40,936 - __main__ - INFO - Round 3 Start
+2026-07-08 01:26:40,936 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:26:40,936 - __main__ - INFO - [8, 4]
+2026-07-08 01:26:40,937 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:27:04,574 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:16<00:00,  6.15it/s]
+2026-07-08 01:27:20,861 - __main__ - INFO - Global loss: 0.018643742990493775, Global Acc: 30.37
+2026-07-08 01:27:20,862 - __main__ - INFO - Round Finish
+2026-07-08 01:27:20,862 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:27:20,863 - __main__ - INFO - Round 4 Start
+2026-07-08 01:27:20,863 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:27:20,863 - __main__ - INFO - [12, 18]
+2026-07-08 01:27:20,863 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:27:49,877 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:16<00:00,  6.05it/s]
+2026-07-08 01:28:06,422 - __main__ - INFO - Global loss: 0.01873415422439575, Global Acc: 31.95
+2026-07-08 01:28:06,423 - __main__ - INFO - Round Finish
+2026-07-08 01:28:06,423 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:28:06,424 - __main__ - INFO - Round 5 Start
+2026-07-08 01:28:06,424 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:28:06,424 - __main__ - INFO - [9, 15]
+2026-07-08 01:28:06,424 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:28:31,917 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:16<00:00,  6.11it/s]
+2026-07-08 01:28:48,304 - __main__ - INFO - Global loss: 0.01782096700668335, Global Acc: 35.35
+2026-07-08 01:28:48,305 - __main__ - INFO - Round Finish
+2026-07-08 01:28:48,305 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:28:48,305 - __main__ - INFO - Round 6 Start
+2026-07-08 01:28:48,306 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:28:48,306 - __main__ - INFO - [2, 19]
+2026-07-08 01:28:48,306 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:29:16,249 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:16<00:00,  6.13it/s]
+2026-07-08 01:29:32,588 - __main__ - INFO - Global loss: 0.019461182415485383, Global Acc: 34.29
+2026-07-08 01:29:32,589 - __main__ - INFO - Round Finish
+2026-07-08 01:29:32,589 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:29:32,589 - __main__ - INFO - Round 7 Start
+2026-07-08 01:29:32,590 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:29:32,590 - __main__ - INFO - [16, 1]
+2026-07-08 01:29:32,591 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:29:59,818 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:16<00:00,  6.23it/s]
+2026-07-08 01:30:15,871 - __main__ - INFO - Global loss: 0.017425295841693878, Global Acc: 35.87
+2026-07-08 01:30:15,872 - __main__ - INFO - Round Finish
+2026-07-08 01:30:15,872 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:30:15,873 - __main__ - INFO - Round 8 Start
+2026-07-08 01:30:15,873 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:30:15,873 - __main__ - INFO - [2, 7]
+2026-07-08 01:30:15,873 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:30:44,336 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:15<00:00,  6.56it/s]
+2026-07-08 01:30:59,605 - __main__ - INFO - Global loss: 0.018443853116035462, Global Acc: 35.04
+2026-07-08 01:30:59,606 - __main__ - INFO - Round Finish
+2026-07-08 01:30:59,607 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:30:59,607 - __main__ - INFO - Round 9 Start
+2026-07-08 01:30:59,607 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:30:59,607 - __main__ - INFO - [4, 1]
+2026-07-08 01:30:59,608 - __main__ - INFO - Cluster 0 Start
+2026-07-08 01:31:28,252 - server.FL_Server - INFO - simulation_agg_control: 2
+100%|██████████████████████████████████████████████████████████████████| 100/100 [00:15<00:00,  6.52it/s]
+2026-07-08 01:31:43,614 - __main__ - INFO - Global loss: 0.01637547700405121, Global Acc: 40.64
+2026-07-08 01:31:43,615 - __main__ - INFO - Round Finish
+2026-07-08 01:31:43,615 - __main__ - INFO - =====================================================================================================>
+2026-07-08 01:31:43,615 - __main__ - INFO - Round 10 Start
+2026-07-08 01:31:43,616 - __main__ - INFO - Current Client IDs:
+2026-07-08 01:31:43,616 - __main__ - INFO - [9, 0]
+2026-07-08 01:31:43,616 - __main__ - INFO - Cluster 0 Start
+Traceback (most recent call last):
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 232, in <module>
+    main()
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\serverrun.py", line 179, in main
+    server.train(r, c)
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\server\FL_Server.py", line 127, in train
+    self.communicator.recv_msg(self.client_socks[client_ip], 'MSG_ROUND_FINISH')
+  File "C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\EDPFL\core\communicator\Socket.py", line 25, in recv_msg
+    msg_len = struct.unpack(">I", sock.recv(4))[0]
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+struct.error: unpack requires a buffer of 4 bytes

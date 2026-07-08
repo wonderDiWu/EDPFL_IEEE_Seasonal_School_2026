@@ -1,0 +1,8 @@
+# FedAdapt configrations
+Pre_processor:
+  observed_num_batches: 3
+  observed_batch_size: 20
+  observed_channel_size: 3
+  observed_input_size: 32
+Clustering:
+  num_groups: 2

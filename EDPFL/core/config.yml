@@ -1,0 +1,76 @@
+#Config for PPT
+# Network configrations
+## Testbed
+### Server address
+### Server port
+Network:
+    SM:
+      SERVER_ADDR: 127.0.0.1
+      SERVER_PORT: 52000
+    PI:
+      SERVER_ADDR: 192.168.137.1
+      SERVER_PORT: 52000
+
+# Dataset and model configrations 
+## Dataset name
+### Path
+### Data length CIFAR10:50000, CIFAR100:50000, MNIST:60000, FMNIST:60000
+### num_classes
+Dataset:
+  FMNIST:
+    path: ../../dataset/FMNIST
+    N: 60000
+    img_size: 28
+    num_classes: 10
+  CIFAR10:
+    path: ../../dataset/CIFAR10
+    N: 50000
+    img_size: 32
+    num_classes: 10
+  CIFAR100:
+    path: ../../dataset/CIFAR100
+    N: 50000
+    img_size: 32
+    num_classes: 100
+  
+# FL configrations
+## Number of devices
+## Number of simulation clusters
+## Sampling ratio
+## Non-IID
+## Number of shards
+## Number of rounds
+## Number of local epochs
+## Batchsize
+## Learning rate
+## Learning rate decay
+## Learning schedule
+## Global Pretrained initialization
+## Pretrained initialization path
+## Random seed
+FL:
+  K: 2
+  C: 1
+  ALPHA: 0.02
+  NON_IID: ON
+  NUM_SHARDS: 500
+  R: 10
+  E: 1
+  B: 20
+  LR: 0.01
+  LR_FACTOR: 0.1
+  LR_SCHEDULE: 100-100
+  PRETRAINED_INIT: OFF
+  PRETRAINED_INIT_PATH: C:\Users\dw217\Desktop\IEEE Seasonal School\EDPFL_Project\pretrained\ResNet12_Tiny-ImageNet.pth
+  SEED: 0
+
+# DPFL configrations
+## Partitioning point, LeNet (1-4), VGG11 (1-5), ResNet12 (1-5) and device native (-1)
+DPFL:
+  PP: 1
+
+# System configrations
+DEVICE: cpu
+
+# Visulization configrations
+WANDB: ON
